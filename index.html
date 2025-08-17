@@ -126,24 +126,29 @@ section.block{margin:22px 0}
 
 footer{padding:24px 0 40px;color:#8b95a3;font-size:13px;text-align:center;border-top:1px solid var(--line)}
 .hero-media{
+position: relative;
 border-radius: 22px;
+overflow: hidden;
 border:1px solid #E6E9ED;
+min-height: clamp(280px, 38vw, 520px);
 background: repeating-linear-gradient(135deg,#dfe5ec 0 14px, transparent 14px 28px);
-/ brak min-height – kontener dopasuje się do obrazka /
 }
 .about .media{
+position: relative;
 border-radius: 22px;
+overflow:hidden;           / ważne, żeby nic nie wystawało /
 border:1px solid #E6E9ED;
+min-height: clamp(220px, 32vw, 420px);
 background:#fff;
-/ brak min-height – kontener dopasuje się do obrazka /
 }
 .cover{
-position:static;           / ważne /
+position:absolute;         / wypełnia kontener /
+inset:0;
 width:100%;
-height:auto;               / wysokość wynika z proporcji zdjęcia /
-display:block;             / usuwa dolną „szparę” obrazka inline /
-object-fit:contain;        / całe zdjęcie */
-object-position:center;
+height:100%;
+display:block;
+object-fit:cover;          / zero pustych pól /
+object-position:right center; / możesz zmienić np. na center center */
 background:#fff;
 }
 /* RWD */
@@ -260,6 +265,7 @@ background:#fff;
   </div>
 </section>
 </main> <footer> Przygotowane jako realizacja I Etapu — opis udanego case study działań B2B w social media na bazie publicznych źródeł. </footer> </body> </html>
+
 
 
 

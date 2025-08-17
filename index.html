@@ -101,22 +101,19 @@
     .cta .pill{padding:12px 18px}
     footer{padding:24px 0 40px;color:#8b95a3;font-size:13px;text-align:center;border-top:1px solid var(--line)}
 
-    /* IMG — poprawka: bez przycinania, wyśrodkowane, responsywne */
+    /* IMG — poprawka: czyste zdjęcie bez tła i obramowania */
     .hero-media{
       position: relative;
-      border-radius: 22px;
+      border-radius: 0;
       overflow: hidden;
-      border:1px solid #E6E9ED;
       min-height: clamp(320px, 38vw, 520px);
-      background: repeating-linear-gradient(135deg,#dfe5ec 0 14px, transparent 14px 28px);
       display:flex;
       align-items:center;
       justify-content:center;
     }
     .about .media{
       position: relative;
-      border-radius: 22px;
-      border:1px solid #E6E9ED;
+      border-radius: 0;
       min-height: clamp(240px, 32vw, 420px);
       background:#fff;
       overflow:hidden;
@@ -125,16 +122,14 @@
       justify-content:center;
     }
 
-    /* Obraz wypełnia wysokość kontenera bez przycinania */
+    /* Obraz wypełnia kontener */
     .cover{
       position: static;
       height:100%;
-      width:auto;
-      max-width:100%;
+      width:100%;
       display:block;
-      object-fit:contain;
+      object-fit:cover;
       object-position:center;
-      background:#fff;
     }
     .hero-cover{ object-position:right center; }
       

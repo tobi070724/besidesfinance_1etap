@@ -1,0 +1,256 @@
+<!DOCTYPE html> <html lang="pl"> <head> <meta charset="utf-8" /> <meta name="viewport" content="width=device-width, initial-scale=1" /> <title>Case study: Przygody Przedsiębiorców — Landing Page</title> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet"> <style> :root{ --bg:#0b1220; --bg-2:#0e1527; --panel:#101a30; --muted:#a7b6d6; --text:#eaf1ff; --accent:#6ee7b7; --accent-2:#60a5fa; --ring: rgba(96,165,250,.25); --card-border: rgba(148,163,184,.18); } *{box-sizing:border-box} html,body{height:100%} body{ margin:0; font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif; color:var(--text); background: radial-gradient(1100px 600px at 90% -10%, rgba(96,165,250,.12), transparent 60%), radial-gradient(900px 500px at 0% 20%, rgba(110,231,183,.1), transparent 60%), var(--bg); line-height:1.6; } a{color:var(--accent-2);text-decoration:none} a:hover{text-decoration:underline} .container{width:100%;max-width:1100px;margin:0 auto;padding:0 20px} header{ padding:26px 0 10px; backdrop-filter:saturate(140%) blur(6px); } .brand{display:flex;align-items:center;gap:12px} .brand-badge{ width:36px;height:36px;border-radius:9px; background:linear-gradient(135deg,var(--accent),#22d3ee); box-shadow:0 10px 25px rgba(34,211,238,.25), inset 0 0 0 2px rgba(0,0,0,.15); } .brand h1{font-size:18px;margin:0;font-weight:800;letter-spacing:.3px} .note{ margin-top:10px; padding:10px 14px;border-radius:12px; background:rgba(96,165,250,.08); border:1px solid rgba(96,165,250,.22); color:#dbeafe; font-size:13px; display:inline-block; }
+/* HERO */
+.hero{
+  padding:28px 0 10px;
+  display:grid;grid-template-columns:1.15fr .85fr;gap:28px;align-items:stretch;
+}
+.hero-card{
+  background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,.0));
+  border:1px solid var(--card-border);
+  border-radius:22px;
+  padding:28px;
+  box-shadow:0 18px 45px rgba(2,6,23,.45), inset 0 1px 0 rgba(255,255,255,.04);
+}
+.hero h1{
+  margin:0 0 6px;
+  font-size:38px;line-height:1.12;font-weight:800;
+  background:linear-gradient(180deg,#fff, #d6e7ff 60%, #a7c3ff);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.hero h2{
+  margin:8px 0 0;font-size:22px;font-weight:700;color:#e6efff;
+}
+.image-placeholder{
+  position:relative;
+  min-height:300px;
+  border-radius:22px;
+  background:
+    linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.01)),
+    repeating-conic-gradient(from 0deg, rgba(96,165,250,.07) 0 15deg, transparent 15deg 30deg);
+  border:1px dashed rgba(148,163,184,.35);
+  display:flex;align-items:center;justify-content:center;
+  color:#bfd7ff;
+  text-align:center;
+  padding:16px;
+}
+.image-placeholder small{opacity:.9}
+
+/* SECTION WRAPPERS */
+section.block{margin:20px 0}
+.panel{
+  border-radius:22px;
+  border:1px solid var(--card-border);
+  background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,.0));
+  overflow:hidden;
+}
+
+/* SECTION: O KANALE */
+.about{
+  display:grid;grid-template-columns:1.1fr .9fr;gap:26px;align-items:stretch;
+}
+.about .text{
+  padding:26px;
+}
+.about .text p{margin:0 0 12px;font-size:17px}
+.about .side{
+  padding:0 0 0;
+  display:grid;grid-template-rows:1fr;
+}
+.quote{
+  margin:0;border-left:4px solid var(--accent-2);
+  padding:18px 16px;background:rgba(96,165,250,.08);border-radius:14px;color:#dce9ff
+}
+
+/* SECTION: BAND (FINANSE) */
+.band{
+  background:linear-gradient(90deg, rgba(96,165,250,.14), rgba(110,231,183,.12));
+  border:1px solid rgba(148,163,184,.25);
+  border-radius:18px;
+  padding:18px 20px;
+  display:grid;gap:10px;
+  box-shadow:0 0 0 6px var(--ring) inset;
+}
+.band p{margin:0;font-size:17px}
+
+/* SECTION: B2B CARDS */
+.card-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:14px
+}
+.mini{
+  background:var(--panel);
+  border:1px solid rgba(148,163,184,.22);
+  border-radius:16px;padding:16px;font-size:16px;line-height:1.55
+}
+.mini strong{
+  display:inline-block;
+  width:28px;height:28px;border-radius:9px;
+  background:linear-gradient(135deg,var(--accent),#22d3ee);
+  color:#052016;font-size:14px;text-align:center;line-height:28px;
+  margin-right:10px;font-weight:800
+}
+
+/* SECTION: INSIGHT + CHECKLIST */
+.insight{
+  display:grid;grid-template-columns:.9fr 1.1fr;gap:26px
+}
+.pull{
+  position:relative;
+  background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.01));
+  border:1px solid var(--card-border);
+  border-radius:18px;padding:20px 18px;font-size:18px;line-height:1.6
+}
+.pull:before{
+  content:"“";
+  position:absolute;top:-26px;left:12px;
+  font-size:90px;line-height:1;color:rgba(96,165,250,.25);font-weight:800
+}
+.checklist{
+  border:1px solid rgba(110,231,183,.28);
+  background:linear-gradient(180deg,rgba(110,231,183,.10),rgba(14,23,42,.15));
+  border-radius:18px;padding:18px 18px
+}
+.checklist ul{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.checklist li{
+  display:flex;gap:10px;align-items:flex-start;
+  background:rgba(110,231,183,.1);border:1px solid rgba(110,231,183,.25);
+  padding:12px;border-radius:14px
+}
+.checklist li .dot{
+  width:24px;height:24px;border-radius:8px;
+  background:linear-gradient(135deg,var(--accent),#22d3ee);
+  color:#052016;font-weight:900;font-size:16px;line-height:24px;text-align:center;flex:0 0 24px
+}
+.chips{
+  margin-top:14px;
+  display:grid;grid-template-columns:1fr 1fr;gap:14px
+}
+.chip{
+  background:var(--panel);
+  border:1px dashed rgba(148,163,184,.35);
+  border-radius:14px;padding:14px 16px;font-size:15px
+}
+
+/* SOURCES + CTA */
+.sources{
+  margin:20px 0 46px;
+}
+.sources h4{margin:0 0 10px;font-size:14px;color:var(--muted);text-transform:uppercase;letter-spacing:.18em}
+.sources ul{margin:0;padding-left:18px}
+.sources li{margin:6px 0}
+.cta{
+  margin:30px 0 10px;text-align:center;
+}
+.cta .cta-card{
+  display:inline-block;
+  padding:20px 22px;
+  border-radius:16px;
+  background:linear-gradient(180deg,rgba(110,231,183,.14),rgba(14,23,42,.35));
+  border:1px solid rgba(110,231,183,.35);
+  box-shadow:0 10px 40px rgba(110,231,183,.12), 0 0 0 6px var(--ring);
+}
+.cta h3{margin:0 0 8px;font-size:20px;color:#eafff6}
+.btn{
+  display:inline-block;margin-top:8px;
+  background:linear-gradient(135deg,var(--accent),#22d3ee);
+  color:#06201a;font-weight:800;
+  padding:10px 16px;border-radius:12px;border:none;cursor:pointer;text-decoration:none;
+  box-shadow:0 8px 24px rgba(34,211,238,.25);
+}
+footer{
+  padding:24px 0 40px;color:var(--muted);font-size:13px;text-align:center
+}
+
+@media (max-width: 980px){
+  .hero{grid-template-columns:1fr;gap:16px}
+  .about{grid-template-columns:1fr;gap:16px}
+  .insight{grid-template-columns:1fr;gap:16px}
+  .card-grid{grid-template-columns:1fr 1fr}
+  .chips{grid-template-columns:1fr}
+  .hero h1{font-size:32px}
+  .image-placeholder{min-height:220px}
+}
+@media (max-width: 560px){
+  .card-grid{grid-template-columns:1fr}
+}
+</style> </head> <body> <header> <div class="container brand"> <div class="brand-badge" aria-hidden="true"></div> <h1>Case study B2B — prezentacja</h1> </div> <div class="container"> <div class="note">Realizacja I etapu — opis publicznego case study B2B w social media</div> </div> </header> <main class="container">
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-card">
+    <h1>Jak sprzedawać cudzą historię sukcesu i zbudować na tym fortunę?</h1>
+    <h2>Case study: „Przygody Przedsiębiorców”</h2>
+  </div>
+
+  <!-- Miejsce na zdjęcie 1 -->
+  <div class="image-placeholder" aria-label="Miejsce na zdjęcie 1">
+    <small>Miejsce na zdjęcie 1 (np. kadr kanału, mockup YT). Rekomendowany rozmiar: 1200×800 px.</small>
+  </div>
+</section>
+
+<!-- O KANALE -->
+<section class="block about panel">
+  <div class="text">
+    <p>„Przygody Przedsiębiorców” to kanał prowadzony przez Adriana Gorzyckiego. Najstarszy publiczny odcinek pochodzi z 8 stycznia 2018 roku. Dziś kanał ma 385 tys. subskrybentów i ponad 105 mln wyświetleń. Format jest prosty, ale skuteczny – wywiady z przedsiębiorcami. Czasem opowiadają oni o firmach, modelach pracy czy produktach, a czasem skupiają się na osobistych historiach i drodze do sukcesu. Każdy odcinek pokazuje, jak udało się wygenerować duże przychody i jak inni mogą powtórzyć tę drogę.</p>
+  </div>
+  <div class="side">
+    <!-- Miejsce na zdjęcie 2 -->
+    <div class="image-placeholder" aria-label="Miejsce na zdjęcie 2">
+      <small>Miejsce na zdjęcie 2 (np. metryki kanału, wykresy, logo). Rekomendowany rozmiar: 1200×800 px.</small>
+    </div>
+  </div>
+</section>
+
+<!-- FINANSE / BAND -->
+<section class="block">
+  <div class="band">
+    <p>Skoro więc bohaterowie kanału otwarcie mówią o finansach, zróbmy to samo.</p>
+    <p>Według danych vidIQ, w ostatnim miesiącu sam AdSense mógł przynieść twórcom od 6 do 18 tys. dolarów przy ok. 3,5 mln wyświetleń.</p>
+  </div>
+</section>
+
+<!-- B2B JAKO PRODUKT — KAFELKI -->
+<section class="block">
+  <div class="card-grid">
+    <div class="mini"><strong>1</strong> Jednak ten kanał to przede wszystkim produkt B2B.</div>
+    <div class="mini"><strong>2</strong> Dla przykładu: w jednym miesiącu opublikowano 6 filmów, z czego 4 były poświęcone jednemu brandowi, a 2 stanowiły sponsorowane wywiady z Hiszpanii z sprzedawczynią z temtego rynku nieruchomości.</div>
+    <div class="mini"><strong>3</strong> Każdy z nich został oznaczony jako reklama lub zawierający treść promocyjną.</div>
+    <div class="mini"><strong>4</strong> W praktyce kanał pełni więc rolę przestrzeni reklamowej dla marek osobistych i firm.</div>
+  </div>
+</section>
+
+<!-- INSIGHT + CHECKLIST -->
+<section class="block insight">
+  <div class="pull">
+    Paradoksalnie, nie same wywiady uczą najwięcej, ale droga tego kanału – to właśnie ona odsłania mechanizmy skutecznego marketingu w social mediach.
+  </div>
+  <div class="checklist">
+    <ul>
+      <li><span class="dot">•</span><div>• Nawet przy modelu B2B warto tworzyć treści, które zainteresują całą niszę. Księgowość dotyczy każdego, ale dopiero ciekawa narracja sprawia, że ludzie chcą tego słuchać.</div></li>
+      <li><span class="dot">•</span><div>• Kluczem jest regularność – krótkie formaty na TikToku, Instagramie czy LinkedInie wspierają widoczność, jednocześnie kierując uwagę na główny kanał sprzedażowy. Algorytm kocha ilość, ale niechętnie odprowadza użytkowników poza swoją platformę.</div></li>
+      <li><span class="dot">•</span><div>• Najlepsza reklama to ta, którą odbiorca chce obejrzeć. „Przygody Przedsiębiorców” są tego idealnym przykładem – format sam w sobie jest interesujący, a więc sprzedażowy.</div></li>
+    </ul>
+    <div class="chips">
+      <div class="chip">Podobne strategie stosują Niebezpiecznik, Ahrefs czy SellWise.</div>
+      <div class="chip">Taką samą zasadę wdrożyłem przy Alterity.pl, co sprawiło, że kanał stał się głównym źródłem leadów.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ŹRÓDŁA -->
+<section class="sources">
+  <h4>Źródła</h4>
+  <ul>
+    <li><a href="https://www.youtube.com/watch?v=O7scpA0EK9Q" target="_blank" rel="noopener">https://www.youtube.com/watch?v=O7scpA0EK9Q</a></li>
+    <li><a href="https://socialblade.com/youtube/c/przygodyprzedsiebiorcow" target="_blank" rel="noopener">https://socialblade.com/youtube/c/przygodyprzedsiebiorcow</a></li>
+    <li><a href="https://vidiq.com/youtube-stats/channel/UCjHJwETvfm2y9vPIyJpVgZA" target="_blank" rel="noopener">https://vidiq.com/youtube-stats/channel/UCjHJwETvfm2y9vPIyJpVgZA</a></li>
+    <li><a href="https://przygodyprzedsiebiorcow.pl" target="_blank" rel="noopener">https://przygodyprzedsiebiorcow.pl</a></li>
+  </ul>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="cta-card">
+    <h3>Do zobaczenia na drugim etapie</h3>
+    <a class="btn" href="#" aria-label="Przejdź do II etapu">Przejdź do II etapu</a>
+  </div>
+</section>
+</main> <footer> Przygotowane jako realizacja I Etapu — opis udanego case study działań B2B w social media na bazie publicznych źródeł. </footer> </body> </html>

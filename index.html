@@ -78,6 +78,41 @@ section.block{margin:22px 0}
 .cta .pill{padding:12px 18px}
 footer{padding:24px 0 40px;color:#8b95a3;font-size:13px;text-align:center;border-top:1px solid var(--line)}
 
+.hero-media{
+position: relative;
+border-radius: 22px;
+overflow: hidden;
+border:1px solid #E6E9ED;
+min-height: clamp(320px, 38vw, 520px);
+background: repeating-linear-gradient(135deg,#dfe5ec 0 14px, transparent 14px 28px);
+display:flex;              / centrowanie obrazka /
+align-items:center;
+justify-content:center;
+}
+.about .media{
+position: relative;
+border-radius: 22px;
+border:1px solid #E6E9ED;
+min-height: clamp(240px, 32vw, 420px);
+background:#fff;
+overflow:hidden;
+display:flex;              / centrowanie obrazka */
+align-items:center;
+justify-content:center;
+}
+
+/* Obraz wypełnia wysokość kontenera bez przycinania /
+.cover{
+position: static;          / żadnego absolute /
+height:100%;               / dopasuj do wysokości kontenera /
+width:auto;                / zachowaj proporcje /
+max-width:100%;            / nie wyjdzie poza kartę /
+display:block;
+object-fit:contain;        / bez przycinania /
+object-position:center;    / wyśrodkowany kadr */
+background:#fff;
+}
+  
 /* RWD */
 @media (max-width: 1024px){
   .hero-grid{grid-template-columns:1fr;gap:16px}
@@ -172,3 +207,4 @@ footer{padding:24px 0 40px;color:#8b95a3;font-size:13px;text-align:center;border
   </div>
 </section>
 </main> <footer> Przygotowane jako realizacja I Etapu — opis udanego case study działań B2B w social media na bazie publicznych źródeł. </footer> </body> </html>
+
